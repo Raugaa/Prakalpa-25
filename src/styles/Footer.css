@@ -1,0 +1,111 @@
+.footer {
+  background-color: rgb(17, 17, 20);
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+html {
+  overflow-x: hidden; /* Ensures no horizontal scroll on the entire page */
+}
+
+.kjscelogo-container {
+  text-align: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  margin-right: 50px;
+}
+
+.Kjscelogo-write {
+  font-size: 12px;
+}
+
+.social-icon-img:hover {
+  transform: scale(1.1);
+}
+
+.Class-text {
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+  margin-right: 50px;
+  font-family: sans-serif;
+}
+
+.isteLogo,
+.kjscelogo {
+  height: 90px;
+  width: auto;
+}
+
+.logo-subtext {
+  color: lightblue;
+  margin-top: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.logo-subtext:hover {
+  color: rgb(253, 253, 73);
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically */
+    padding: 15px;
+  }
+
+  .kjscelogo-container,
+  .logo-container {
+    margin-bottom: 10px; /* Add spacing between sections */
+  }
+
+  .social-links {
+    margin: 10px 0;
+  }
+
+  .social-icon-img {
+    margin-right: 0; /* Remove extra margin */
+  }
+
+  .Class-text {
+    margin-right: 0; /* Prevent text overflow */
+    text-align: center;
+  }
+
+  .isteLogo,
+  .kjscelogo {
+    height: 60px; /* Scale down logos */
+  }
+
+  .logo-subtext {
+    text-align: center;
+  }
+}

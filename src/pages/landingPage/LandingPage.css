@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.landingPageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.landingPageMain {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.prakalpaTitle {
+  font-family: "Nunito", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.glow-effectForTitle {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 238, 175, 0.3),
+    0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5),
+    0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3);
+}
+
+.prakalpaSubtitle {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 1.9rem;
+  color: whitesmoke;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.prakalpaSubtxt
+{
+  font-family: "Protest Strike", sans-serif;
+  font-size: 1.6rem;
+  color: whitesmoke;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.abovePrakalpaTitle {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 2.1rem;
+  color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .landingPageHeader {
+    height: 10%;
+  }
+
+  .menuIcon {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .landingPageMain {
+    height: 90%;
+  }
+
+  .prakalpaTitle {
+    font-size: 3rem;
+  }
+
+  .prakalpaSubtitle {
+    font-size: 1.5rem;
+  }
+  .prakalpaSubtxt
+  {
+    font-size: 1.3rem;
+  }
+
+  .abovePrakalpaTitle {
+    font-size: 1.8rem;
+  }
+
+  .verticalNavBar {
+    width: 200px;
+    left: -300px;
+  }
+
+  .verticalNavBar::before {
+    border-left: 100px solid #131315e6;
+  }
+
+  .navBarElement {
+    font-size: 1.5rem;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prakalpaTitle {
+    font-size: 2.8rem;
+  }
+
+  .prakalpaSubtitle {
+    font-size: 1.4rem;
+  }
+  .prakalpaSubtxt
+  {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.2rem;
+  }
+
+  .abovePrakalpaTitle {
+    font-size: 1.6rem;
+  }
+
+  .verticalNavBar {
+    width: 150px;
+    left: -240px;
+  }
+
+  .verticalNavBar::before {
+    border-left: 90px solid #131315e6;
+  }
+
+  .navBarElement {
+    font-size: 1.5rem;
+    padding-left: 30px;
+  }
+}

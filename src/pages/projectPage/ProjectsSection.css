@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Protest+Strike&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.projects-section {
+  padding: 50px 0;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.projects-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title-project {
+  font-size: 3.8rem;
+  font-family: "Jersey 15", serif;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Card Container */
+.project-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual Card */
+.project-card {
+  perspective: 1000px;
+  width: 250px;
+  height: 300px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+/* Front Face */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid white; /* Thin white outline */
+}
+
+/* Updated Front Face - Full Black */
+.card-front {
+  background: #000; /* Full black */
+  color: #ffffff;
+}
+
+/* Updated Back Face - Bright Sky Blue */
+.card-back {
+  background: #00aaff; /* Bright sky blue */
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.card-front h3,
+.card-back h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-front p,
+.card-back p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .project-cards {
+    gap: 15px;
+  }
+
+  .project-card {
+    width: 200px;
+    height: 260px;
+  }
+
+  .card-front h3,
+  .card-back h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-front p,
+  .card-back p {
+    font-size: 0.9rem;
+  }
+}

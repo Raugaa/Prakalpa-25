@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+.logosNavBar {
+  display: flex;
+  height: 11%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(24, 24, 27, 0.7);
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.logoImage {
+  height: 90%;
+  width: auto;
+}
+
+.logoImage:nth-child(1) {
+  margin-left: 15px;
+}
+
+.logoImage:nth-child(2) {
+  margin-right: 15px;
+}
+
+.floatingNavBar {
+  height: 10%;
+  width: fit-content;
+  background-color: rgba(24, 24, 27, 0.9);
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  z-index: 4;
+  border-radius: 40px;
+  border: 1px solid #262c2c;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.floatingNavBar.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.floatingNavBar.hidden {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+}
+
+.logosNavBar.hidden {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+}
+
+.floatingNavBar > * {
+  text-decoration: none;
+}
+
+.navBarElement {
+  color: whitesmoke;
+  font-size: 1.6rem;
+  font-family: "Kanit", sans-serif;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navBarElement:hover {
+  text-shadow: 0 0 2px rgba(0, 255, 255, 0.3), 
+               0 0 10px rgba(0, 255, 255, 0.4),
+               0 0 10px rgba(0, 255, 255, 0.5), 
+               0 0 15px rgba(47, 68, 68, 0.4),
+               0 0 20px rgba(0, 255, 255, 0.3);
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .logosNavBar {
+    height: 9%;
+  }
+
+  .logoImage:nth-child(1) {
+    margin-left: 5px;
+  }
+
+  .logoImage:nth-child(2) {
+    margin-right: 5px;
+  }
+
+  .floatingNavBar {
+    width: 90%;
+    gap: 5px;
+    padding: 10px;
+    height: auto;
+    flex-direction: row;
+    top: 5%;
+    justify-content: center; /* Ensure center alignment on mobile */
+  }
+
+  .navBarElement {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    text-align: center;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .floatingNavBar {
+    width: 85%;
+    height: auto;
+    top: 6%;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center; /* Extra alignment fix */
+  }
+
+  .navBarElement {
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+}

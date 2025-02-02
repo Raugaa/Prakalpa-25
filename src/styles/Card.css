@@ -1,0 +1,71 @@
+.individualThemeCard {
+  height: 300px;
+  width: 200px;
+  border: 1px solid white;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(205, 127, 50, 0.4);
+}
+
+.titleAndDescription {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -85%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.titleAndDescription.hovered {
+  bottom: 0;
+}
+
+.bottomTitleBarForThemeCard {
+  min-height: 15%;
+  max-height: 15%;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.9);
+  color: white;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.descriptionForThemeCardContainer {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  flex-grow: 1;
+  backdrop-filter: blur(5px);
+  font-size: 0.85rem;
+}
+
+.descriptionForThemeCardContainer > p {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .bottomTitleBarForThemeCard {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .individualThemeCard {
+    width: 45% !important;
+    margin-top: 0;
+  }
+
+  .bottomTitleBarForThemeCard {
+    font-size: 1.01rem;
+  }
+}
